@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+html,.body{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    scroll-behavior: smooth;
+    overflow: hidden;   
+    display: flex;
+    justify-content: center;
+    transition: .9s;
+}
+
+/* sections styles start *************************/
+/* this are for each section to make a slider */
+section{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;   
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: 1.7s;
+}
+/* this class is here to make sections show */
+.secNext{
+    opacity: 1;
+    z-index: 1;
+}
+/* this class is here to make sections hide */
+.secBack{
+    opacity: 0;
+    z-index: -1;
+}
+/* sections styles end *************************/
+
+/* styles for every title or paragraph or text start *************************/
+.tit{
+    color: #664aff;
+    font-size: 25px;
+}
+/* styles for every title or paragraph or text end *************************/
+
+/* styles for every button start *************************/
+/* I think these code doesn't need explain !*/
+.but{
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 22px;
+    border: none;
+}
+.but:hover{
+    color: #acabab;
+}
+
+.but:active{
+    color: #828080;
+}
+
+.but-next{
+    background-color: #25ff87;
+}
+.but-back{
+    background-color: #ec3030;
+} 
+
+/* styles of button of for a male person on first section */
+.male-but{
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: 60%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.male-but:hover{
+    background-color: #dadada;
+}
+
+/* styles of button of for a female person on first section */
+.female-but{
+    position: relative;   
+    background-color: transparent;
+    border: none;
+    width: 60%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.female-but:hover{
+    background-color: #dadada;
+}
+/* styles for every button start *************************/
+
+ /* and these are for their body . it starts here */
+.male2Head{/* head */
+    position: absolute;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4a95ff;
+    transition: 2s;
+}
+.male2Body{/* body */
+    position: absolute;
+    top: 65px;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    background-color: #4a95ff;
+    transition: 1.5s;
+}
+.male2Foot{/* foot */
+    position: absolute;
+    top: 150px;
+    border-top: 80px solid #4a95ff;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 60px;
+    transition: 1s;
+}
+ /* and it ends here */
+
+
+/* like top for female body starts here */
+.female2Head{/* head */
+    position: absolute;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff4a4a;
+    transition: 2s;
+}
+.female2Head::after{ /* after is for female hair */
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff504a;
+    border-radius: 50px;
+}
+.female2Head::before{/* before is for hair too */
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff504a;
+    border-radius: 50px;
+}
+.female2Body{/* body */
+    position: absolute;
+    top: 65px;
+	height: 80px;
+	width: 80px;
+    border-radius: 15px;
+    background-color: #ff4a4a;
+    transition: 1.5s;
+}
+.female2Foot{/* foot */
+    position: absolute;
+    top: 150px;
+    border-top: 80px solid #ff4a4a;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 60px;
+    transition: 1s;
+}
+/* and ends here */
+
+/* this comment is for separate two body styles so as not to confuse them ********************************************************************* */
+
+/* these styles will change with height and weight value */
+.maleHead{/* head */
+    position: absolute;
+    top: 210px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4a95ff;
+    transition: 1s;  
+    z-index: -1;
+    opacity: 0;
+}
+.maleBody{/* body */
+    position: absolute;
+    top: 255px;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    background-color: #4a95ff;
+    transition: 1s;
+    z-index: -1;
+    opacity: 0;
+}
+.maleFoot{/* foot */
+    position: absolute;
+    top: 340px;
+    border-top: 80px solid #4a95ff;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 60px;
+    transition: 1s;
+    z-index: -1;
+    opacity: 0;
+}
+
+
+
+
+.femaleHead{/* head */
+    position: absolute;
+    top: 210px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff4a4a;
+    transition: 1s;  
+    z-index: -1;
+    opacity: 0
+}
+.femaleHead::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff504a;
+    border-radius: 50px;
+}
+.femaleHead::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff504a;
+    border-radius: 50px;
+}
+
+.femaleBody{/* foot */
+    position: absolute;
+    top: 255px;
+	height: 80px;
+	width: 80px;
+    border-radius: 15px;
+    background-color: #ff4a4a;
+    transition: 1s;
+    z-index: -1;
+    opacity: 0;
+}
+.femaleFoot{ /* foot */
+    position: absolute;
+    top: 340px;
+    border-top: 80px solid #ff4a4a;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 60px;
+    transition: 1s;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* range styles */
+.range{
+    width: 100%;
+    height: 80px;
+    background-color: #42414d;
+    border-radius: 10px;
+    padding: 0 65px 0 45px;
+}
+
+.range .field{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.range .field .value{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 600;
+    color: #8873ff;
+}
+
+.range .field .value.left{
+    left: -22px;
+}
+
+.range .field .value.right{
+    right: -43px;
+}
+
+.range .field input{
+    -webkit-appearance: nones;
+    height: 3px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.range .field input::-moz-range-thumb {
+    -webkit-appearance: nones;
+    height: 15px;
+    width: 15px;
+    background-color: #8873ff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
